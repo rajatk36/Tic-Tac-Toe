@@ -1,0 +1,190 @@
+html,body, #root{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+.header{
+    border-bottom: solid 2px black;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+.bg-image{
+    position: absolute;
+    z-index: -1;
+    height: 1024px;
+    width: 900px;
+}
+.tic-tac-toe{
+    position: relative;
+    height: 100vh;
+    width:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 50px;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+}
+
+.board{
+    padding: 10px;
+    position: relative;
+    height: 30rem;
+    width: 30rem;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    border: solid 5px white;
+    flex-wrap: wrap;
+    
+}
+.square{
+    height: 10rem;
+    width: 10rem;
+    border: solid 2px rgb(255, 255, 255);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.square.win{
+    background-color: rgb(0, 255, 221);
+}
+.circle{
+    height:8rem;
+    width: 8rem;
+    border-radius: 50%;
+    border: solid 15px rgb(246, 246, 246);
+    box-sizing: border-box;
+}
+
+.cross{
+    height:8rem;
+    width: 8rem;
+    position: relative;
+    transform: rotate(45deg);
+}
+.cross:before, .cross:after{
+    content: "";
+    position:absolute;
+    background-color: red;
+}
+.cross:before{
+    left:50%;
+    width:30%;
+    height:100%;
+    margin-left: -15%;
+}
+.cross:after{
+    top:50%;
+    height: 30%;
+    width: 100%;
+    margin-top:-15%;
+}
+.footer{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.game-btn{
+    font-size: 30px;
+    background-color: rgba(153, 240, 23, 0.408);
+    max-width: fit-content;
+}
+.game-msg{
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+
+
+@media(min-width:786px){
+    .tic-tac-toe{
+        font-size:55px;
+    }
+    .board{
+        height:33rem;
+        width:33rem;
+        border:solid 2px white;
+    }
+    .square{
+        width: 11rem;
+        height: 11rem;
+    }
+    .circle{
+        height: 8.5rem;
+        width: 8.5rem;
+    }
+    .cross{
+        height: 8.5rem;
+        width: 8.5rem;
+    }
+}
+
+@media (max-width:600px) {
+    .tic-tac-toe{
+        font-size: 30px;
+    }
+    .board{
+        height:21rem;
+        width:21rem;
+        border:solid 2px white;
+    }
+    .square{
+        width: 7rem;
+        height: 7rem;
+    }
+    .circle{
+        height: 4.5rem;
+        width: 4.5rem;
+        border: solid 10px white;
+    }
+    .cross{
+        height: 4.5rem;
+        width: 4.5rem;
+    }
+    .cross:before{
+    left:55%;
+    width:20%;
+    height:100%;
+    margin-left: -15%;
+}
+.cross:after{
+    top:55%;
+    height: 20%;
+    width: 100%;
+    margin-top:-15%;
+}
+
+}
+
+@media (max-width : 400px){
+    .tic-tac-toe{
+        font-size: 20px;
+    }
+    .board{
+        height:15rem;
+        width:15rem;
+        border:solid 2px white;
+    }
+    .square{
+        width: 5rem;
+        height: 5rem;
+    }
+    .circle{
+        height: 3.3rem;
+        width: 3.3rem;
+        border: solid 7px white;
+    }
+    .cross{
+        height: 3.3rem;
+        width: 3.3rem;
+    }
+
+}
